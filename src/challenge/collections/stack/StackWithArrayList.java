@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class StackWithArrayList {
+public class StackWithArrayList<T> {
 
-    private List<Integer> myStack;
+    private List<T> myStack;
 
     public StackWithArrayList(){
         this.myStack = new ArrayList<>();
@@ -17,7 +17,7 @@ public class StackWithArrayList {
     *
     * */
 
-    public boolean push(Integer element) {
+    public boolean push(T element) {
         if(element == null)
             return false;
 
@@ -30,10 +30,10 @@ public class StackWithArrayList {
     * pop: Return the last inserted element, and deleted from the top.
     *
     * */
-    public Integer pop() {
+    public T pop() {
         if(isEmpty())
             throw new NoSuchElementException("Empty Stack");
-        Integer myElement = myStack.get(myStack.size() - 1);
+        T myElement = myStack.get(myStack.size() - 1);
         myStack.remove(myStack.size() - 1);
         return myElement;
     }
@@ -42,7 +42,7 @@ public class StackWithArrayList {
      * peek: Return the last inserted element
      *
      * */
-    public Integer peek() {
+    public T peek() {
         if(isEmpty())
             throw new NoSuchElementException("Empty Stack");
 

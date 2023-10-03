@@ -1,9 +1,11 @@
 package challenge.collections.stack;
 
+import java.util.Stack;
+
 public class StackTester {
 
     public static void main(String[] args) {
-        StackWithArrayList stack  = new StackWithArrayList();
+        StackWithArrayList<Integer> stack  = new StackWithArrayList<>();
 
         System.out.println(stack.isEmpty());
 
