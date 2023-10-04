@@ -1,7 +1,5 @@
 package challenge.collections.stack;
 
-import java.util.Stack;
-
 public class StackTester {
 
     public static void main(String[] args) {
@@ -27,5 +25,19 @@ public class StackTester {
 
         System.out.println(stack.isEmpty());
 
+        /**************/
+        StackWithMinValue stackWithMinValue = new StackWithMinValue();
+
+        stackWithMinValue.push(5);
+        stackWithMinValue.push(-11);
+        stackWithMinValue.push(-5);
+
+        stackWithMinValue.pop();
+
+        stackWithMinValue.pop();
+        stackWithMinValue.pop();
+
+        stackWithMinValue.push(-1);
+        System.out.println(stackWithMinValue.getMin());
     }
 }
