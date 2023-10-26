@@ -34,6 +34,7 @@ public class ExtraLongFactorial {
 
     public static void main(String[] args) {
         System.out.println(extraLongFactorialsRecursive(BigInteger.valueOf(5)));
+        System.out.println(3%4);
     }
 
 }
